@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui;
+  --color-primary: #134e4a;
+  --color-secondary: #0d9488;
+}
+
+.tab {
+  @apply h-[calc(100%-70px)] w-full flex flex-col justify-center items-center
+}
+
+.selectable{
+  @apply transform hover:scale-105 transition ease-in-out duration-200 active:scale-95
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+body {
+  margin: 0;
+}
+
+.et-main {
+  margin: 0;
+  padding: 0;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.et-hero-tabs h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+
+.et-hero-tabs h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #115e59;
+  z-index: 10;
+  transition: top 0.3s ease;
+}
+
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+.et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #ffffff;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+}
+
+.et-hero-tab:hover {
+  color: #ffffff;
+  background: #0d9488;
+}
+
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #14b8a6;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .et-hero-tabs h1 {
+    font-size: 3rem;
+  }
+  .et-hero-tabs h3 {
+    font-size: 1rem;
+  }
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+}
+
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: rgba(13, 148, 136, 0.75);
+  /*padding: 0 2em;*/
+}
+
+.et-slide h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+
+.et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+@media (min-width: 800px) {
+  .et-slide h1 {
+    font-size: 3rem;
+  }
+  .et-slide h3 {
+    font-size: 1rem;
+  }
+}
+
+.slide-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
